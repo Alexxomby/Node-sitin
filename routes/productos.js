@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 
-/* Get seccion(productos.ejs). */
-router.get('/', function (req, res, next) {
-    res.render('productos', { title: 'Nuestros productos' });
-});
+/*Get home page (productos.ejs). */
+router.get('/productos', function(req, res, next){
+    res.render('productos',{ title:'Nuestros productos ...'});
+  });
   
 
 

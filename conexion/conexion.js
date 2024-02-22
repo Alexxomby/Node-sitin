@@ -9,6 +9,42 @@ const connection = mysql.createConnection({
 
     host: 'localhost',
     user: 'root',
+    password: 'n0m3l0',
+    database: 'mydb'
+});
+
+connection.connect(
+
+    (err) => {
+        if (!err) { console.log("conec"); }
+    
+    else{
+    console.log( "faillaste manco");
+    }
+}
+);
+
+connection.query("SELECT * FROM tblproductos", function (err, resultados) {
+    console.log(err);
+    console.log(resultados);
+});
+
+connection.end()
+//borrar pa arriba
+
+
+
+/*const mysql = require('mysql2');
+const connection = mysql.createConnection({
+    /*
+    host: 'localhost',
+    user: 'root',
+    password: 'Batiz2024',
+    database: 'ventas'
+    
+
+    host: 'localhost',
+    user: 'root',
     password: 'N0ml0',
     database: 'mydb'
 });
@@ -30,7 +66,7 @@ connection.query("SELECT * FROM tblproductos", function (err, resultados) {
 });
 
 connection.end()
-
+*/
 
 /*
 const mysql = require('mysql')
