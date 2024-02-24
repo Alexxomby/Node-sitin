@@ -20,17 +20,23 @@ connection.connect(
         if (!err) { console.log("conec"); }
     
     else{
-    console.log( "faillaste manco");
+            console.log("faillaste manco");
+            console.log(err);
     }
 }
 );
+
+module.exports = connection; //estamos exportando la conexion para exportarla a productos
+//dice que comentemmos esto
+/*
 
 connection.query("SELECT * FROM tblproductos", function (err, resultados) {
     console.log(err);
     console.log(resultados);
 });
 
-connection.end()
+connection.end()*/ //////////
+
 //borrar pa arriba
 
 
