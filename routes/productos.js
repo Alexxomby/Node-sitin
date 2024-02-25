@@ -8,12 +8,18 @@ router.get('/', function (req, res, next) {
 
   connectionp.query("SELECT * FROM tblproductos",function(err, resultados) {
     console.log(resultados);
+
+    //vamos a pasarle a prodcutos (template) la info de la base d eedatos
+    
+    res.render('productos',{ title:'Nuestros productos ...', Libros:resultados});
+
+
     
   });
 
   
-    
-    res.render('productos',{ title:'Nuestros productos ...'});
+    //por lo que asaramos esta linmea de codigo par aponerla a renderizar
+    //res.render('productos',{ title:'Nuestros productos ...'});
   });
   
 
